@@ -1,0 +1,35 @@
+{{FrontSide}}
+
+<hr id=answer>
+<div class="frequency-badge">{{Frequency}}</div>
+
+<span class="furigana">{{Reading}}</span>
+{{Word}}
+
+<div class="media">
+	<input type="checkbox" class="toggle" id="toggleCheck">
+
+	<div class="flex-container">
+	<label for="toggleCheck" class="main-image {{Tags}}">{{Picture}}</label>
+	<label for="toggleCheck" class="zoom-label {{Tags}}" style="font-size: 25px;">{{Sentence}}</label>
+	</div>
+</div>
+
+<div class="definition-container">
+    <div class="main-def" style='font-size: 24px;'>
+        {{PitchAccentPosition}} {{furigana:Glossary}}
+    </div>
+
+    <div style='font-size: 18px;'>
+        <details>
+            <summary>secondary def</summary>
+            {{SecondaryDef}}
+        </details>
+    </div>
+</div>
+
+<p><div style='font-size: 25px;'>{{PitchAccentGraph}}</div></p>
+
+<p>______</p>
+{{Audio}}
+{{SentenceAudio}}

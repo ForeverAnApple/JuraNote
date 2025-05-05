@@ -1,0 +1,103 @@
+@font-face { font-family: myfont; src: url('UDDIGIKYOKASHON-R.TTC'); font-weight: normal;}
+@font-face { font-family: myfont; src: url('UDDIGIKYOKASHON-B.TTC'); font-weight: bold;}
+
+.card, .card.nightMode {
+  font-family: myfont;
+  font-size: 60px;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+b, strong {
+  color: #FFA313;
+}
+
+.night_mode {}
+
+img {
+ width: 100%;
+ height: auto;
+ max-width: 600px;
+ max-height: 300px;
+}
+
+.furigana {
+  display: block;
+  font-size: 0.5em;
+  line-height: .5;
+  color: #aaa;
+}
+
+/* New definition container styles */
+.definition-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+
+.main-def {
+  justify-content: center;
+  width: auto;
+}
+
+.media {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle {
+  display: none;
+}
+
+.nsfw {
+  filter: blur(8px);
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.toggle:checked ~ .flex-container .nsfw {
+  filter: blur(0px);
+}
+
+.main_image {
+  display: block;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.frequency-badge {
+  position: absolute;
+  top: 10px; right: 20px;
+  font-size: 18px;
+}
+
+/* Media query for mobile screens */
+@media screen and (max-width: 868px) {
+  .flex-container {
+    flex-direction: column;
+  }
+  
+  .main_image {
+    margin-bottom: 15px;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .card, .card.nightMode {
+    font-size: 40px; /* Slightly smaller font on mobile */
+  }
+  
+  .definition-container {
+    max-width: 90%;
+  }
+}
