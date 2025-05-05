@@ -1,35 +1,35 @@
-{{FrontSide}}
+<br>
+<div class="back-box">
+  <div class="frequency-badge">{{Frequency}}</div>
+  <div class="audio">{{Audio}}<br>{{SentenceAudio}}</div>
+  <div class="word">
+    <span class="furigana">{{Reading}}</span>
+    <span class="word-text">{{Word}}</span>
+  </div>
 
-<hr id=answer>
-<div class="frequency-badge">{{Frequency}}</div>
+  <div class="media">
+    <input type="checkbox" class="toggle" id="toggleCheck">
 
-<span class="furigana">{{Reading}}</span>
-{{Word}}
-
-<div class="media">
-	<input type="checkbox" class="toggle" id="toggleCheck">
-
-	<div class="flex-container">
-	<label for="toggleCheck" class="main-image {{Tags}}">{{Picture}}</label>
-	<label for="toggleCheck" class="zoom-label {{Tags}}" style="font-size: 25px;">{{Sentence}}</label>
-	</div>
-</div>
-
-<div class="definition-container">
-    <div class="main-def" style='font-size: 24px;'>
-        {{PitchAccentPosition}} {{furigana:Glossary}}
+    <div class="flex">
+      <label for="toggleCheck" class="main-image {{Tags}}">
+        <div class="pic">{{Picture}}</div>
+      </label>
+      <label for="toggleCheck" class="backSent {{Tags}}">{{Sentence}}</label>
+    </div>
+  </div>
+  <div class="definition-container">
+    <div class="main-def">
+      {{furigana:PrimaryDef}}
     </div>
 
-    <div style='font-size: 18px;'>
-        <details>
-            <summary>secondary def</summary>
-            {{SecondaryDef}}
-        </details>
+    <div class="secondary-def">
+      <details>
+        <summary>secondary def</summary>
+        {{SecondaryDef}}
+      </details>
     </div>
+  </div>
+  <p>
+  <div style='font-size: 25px;'>{{PitchAccentPosition}} {{PitchAccentGraph}}</div>
+  </p>
 </div>
-
-<p><div style='font-size: 25px;'>{{PitchAccentGraph}}</div></p>
-
-<p>______</p>
-{{Audio}}
-{{SentenceAudio}}
