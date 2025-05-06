@@ -7,29 +7,30 @@
     <span class="word-text">{{Word}}</span>
   </div>
 
-  <div class="media">
-    <input type="checkbox" class="toggle" id="toggleCheck">
+  <input type="checkbox" class="toggle" id="toggleCheck">
 
-    <div class="flex">
-      <label for="toggleCheck" class="main-image {{Tags}}">
-        <div class="pic">{{Picture}}</div>
-      </label>
-      <label for="toggleCheck" class="backSent {{Tags}}">{{Sentence}}</label>
+  <div class="flexgrid">
+  <div class="main-image">
+    <div class="blurwrap {{Tags}}">
+    <label for="toggleCheck">{{Picture}}</label>
     </div>
   </div>
-  <div class="definition-container">
-    <div class="main-def">
-      {{furigana:PrimaryDef}}
+  <div class="back-sentence ">
+    <div class="blurwrap {{Tags}}">
+    <label for="toggleCheck">{{Sentence}}</label>
     </div>
+  </div>
 
+  <div class="definition-container">
+    <div class="main-def">{{furigana:PrimaryDef}}</div>
     <div class="secondary-def">
       <details>
         <summary>secondary def</summary>
         {{SecondaryDef}}
       </details>
     </div>
+    <div class="accent">{{PitchAccentPosition}} {{PitchAccentGraph}}</div>
   </div>
-  <p>
-  <div style='font-size: 25px;'>{{PitchAccentPosition}} {{PitchAccentGraph}}</div>
-  </p>
+  </div>
+
 </div>
