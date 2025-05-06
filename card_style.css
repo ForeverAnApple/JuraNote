@@ -52,9 +52,10 @@ img {
   text-align: left;
   padding: 20px 15px;
   margin-left: 20px;
+  margin-bottom: 15px;
   border-radius: 25px;
   box-shadow: 0 0 5px #7c6f64;
-  max-height: 450px;
+  max-height: 400px;
 }
 
 b,
@@ -103,7 +104,8 @@ strong {
   display: grid;
   grid-template-areas:
     "box1 box2"
-    "box3 box2";
+    "box3 box2"
+    "box3 box4";
 }
 
 .main-image {
@@ -124,12 +126,17 @@ strong {
   padding: 10px 0;
 }
 
+.accent {
+  grid-area: box4;
+}
+
 @media screen and (max-width: 768px) {
   .flexgrid {
     grid-template-areas:
       "box1"
       "box2"
-      "box3";
+      "box3"
+      "box4";
   }
 
   .back-sentence {
@@ -141,7 +148,7 @@ strong {
   }
 
   .card {
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .definition-container {
