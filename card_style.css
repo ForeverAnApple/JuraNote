@@ -101,71 +101,66 @@ strong {
 
 /* grid setup to allow for right alignment on desktop */
 .flexgrid {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+
+.flexgrid-left,
+.flexgrid-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexgrid-right {
+  overflow: visible;
   position: relative;
 }
 
 .main-image {
-  border-radius: 25px;
   display: flex;
   justify-content: center;
-	align-self: start;
-	grid-column: 1;
-  grid-row: 1;
 }
 
 .back-sentence {
-  grid-area: box2;
-  overflow: hidden;
-  position: relative;
-  grid-column: 2;
-  grid-row: 1 / span 2;
+  position: relative; /* Allow .accent to be positioned below */
   align-self: start;
 }
 
 .definition-container {
-  grid-area: box3;
-  padding: 10px 0;
-  grid-column: 1;
-  grid-row: 2;
+  margin-top: 10px;
 }
 
 .accent {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 2;
+  display: block;
+  width: 100%;
+  font-size: 0.65em;
+  text-align: right;
+  overflow: visible;
+  position: relative;
+  z-index: 1;
 }
 
 @media screen and (max-width: 768px) {
   .flexgrid {
-    grid-template-areas:
-      "box1"
-      "box2"
-      "box3"
-      "box4";
+    flex-direction: column;
+  }
+
+  .flexgrid-right {
+    justify-content: center;
   }
 
   .accent {
-    grid-area: box3;
-    position: absolute;
-    right: 0;
-    top: 10%;
+    position: static;
+		right: 0;
+    top: 100%;
     font-size: 0.55em;
-  }
-
-  .main-image {
-    grid-area: box1;
-  }
-
-  .definition-container {
-    grid-area: box3;
   }
 
   .back-sentence {
     writing-mode: horizontal-tb;
     text-align: center;
+    position: relative;
     padding: 10px;
     position: static;
     grid-area: box2;
