@@ -115,9 +115,7 @@ strong {
   grid-row: 1;
 }
 
-.back-sentence {
-  grid-area: box2;
-  overflow: hidden;
+.sen-accent {
   position: relative;
   grid-column: 2;
   grid-row: 1 / span 2;
@@ -131,13 +129,6 @@ strong {
   grid-row: 2;
 }
 
-.accent {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 2;
-}
-
 @media screen and (max-width: 768px) {
   .flexgrid {
     grid-template-areas:
@@ -148,10 +139,9 @@ strong {
   }
 
   .accent {
-    grid-area: box3;
     position: absolute;
     right: 0;
-    top: 10%;
+    top: 100%;
     font-size: 0.55em;
   }
 
@@ -163,12 +153,15 @@ strong {
     grid-area: box3;
   }
 
+	.sen-accent {
+    grid-area: box2;
+  }
+
   .back-sentence {
     writing-mode: horizontal-tb;
     text-align: center;
     padding: 10px;
     position: static;
-    grid-area: box2;
     border-radius: 10px;
     margin: 10px 0;
     box-shadow: 0 0 10px #7c6f64;
