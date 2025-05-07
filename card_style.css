@@ -117,12 +117,6 @@ img {
   font-size: 12px;
 }
 
-.sen-accent {
-  grid-column: 2;
-  grid-row: 1 / span 2;
-  align-self: start;
-}
-
 .back-sentence {
   writing-mode: vertical-rl;
   text-align: justify;
@@ -133,6 +127,9 @@ img {
   font-size: 21px;
   box-shadow: 0 0 5px #7c6f64;
   max-height: 350px;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: start;
 }
 
 b, strong {
@@ -167,9 +164,6 @@ b, strong {
   }
 
   .sen-accent {
-    grid-column: 1;
-    grid-row: 2;
-    width: 100%;
   }
 
   .back-sentence {
@@ -180,6 +174,9 @@ b, strong {
     margin: 10px auto;
     box-shadow: 0 0 10px #7c6f64;
     max-width: 90%;
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
   }
   
   .accent {
