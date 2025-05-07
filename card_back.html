@@ -1,29 +1,27 @@
+<div class="frequency-badge">{{Frequency}}</div>
+<div class="audio">{{Audio}}<br>{{SentenceAudio}}</div>
 <br>
-<div class="back-box">
-  <div class="frequency-badge">{{Frequency}}</div>
-  <div class="audio">{{Audio}}<br>{{SentenceAudio}}</div>
+<div class="top-bar">
   <div class="word">
     <span class="furigana">{{Reading}}</span>
     <span class="word-text">{{Word}}</span>
   </div>
+  <div class="accent">
+    <div class="accent-num">{{PitchAccentPosition}}</div>
+    <!-- currently disabled due to an anki rendering bug -->
+    <!-- div class="accent-num">{{PitchAccentGraph}}</div -->
+  </div>
+</div>
 
-  <input type="checkbox" class="toggle" id="toggleCheck">
 
-  <div class="flexgrid">
+<input type="checkbox" class="toggle" id="toggleCheck">
+
+<div class="flexgrid">
   <div class="main-image">
     <div class="blurwrap {{Tags}}">
-    <label for="toggleCheck">{{Picture}}</label>
+      <label for="toggleCheck">{{Picture}}</label>
     </div>
   </div>
-  
-	<div class="sen-accent">
-  <div class="back-sentence ">
-    <div class="blurwrap {{Tags}}">
-    <label for="toggleCheck">{{Sentence}}</label>
-    </div>
-  </div>
-  <div class="accent">{{PitchAccentPosition}} {{PitchAccentGraph}}</div>
-	</div>
 
   <div class="definition-container">
     <div class="main-def">{{furigana:PrimaryDef}}</div>
@@ -34,6 +32,12 @@
       </details>
     </div>
   </div>
-  </div>
 
+  <div class="sen-accent">
+    <div class="back-sentence ">
+      <div class="blurwrap {{Tags}}">
+        <label for="toggleCheck">{{Sentence}}</label>
+      </div>
+    </div>
+  </div>
 </div>

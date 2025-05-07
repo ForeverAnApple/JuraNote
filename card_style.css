@@ -20,19 +20,14 @@ body {
 img {
   display: block;
   max-height: 400px;
+  max-width: 450px;
 }
 
-.card {
-  font-size: 32px;
-}
-
-.definition-container {
-  font-size: 22px;
-}
-
-.back-box {
-  width: auto;
-  max-width: 800px;
+.frequency-badge {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 19px;
 }
 
 .audio {
@@ -47,24 +42,15 @@ img {
   height: 25px;
 }
 
-.back-sentence {
-  writing-mode: vertical-rl;
-  text-align: left;
-  padding: 20px 15px;
-  margin-left: 20px;
-  margin-bottom: 15px;
-  border-radius: 25px;
-  box-shadow: 0 0 5px #7c6f64;
-  max-height: 400px;
-}
-
-b,
-strong {
-  color: #FFA313;
+.top-bar {
+  position: relative;
+  margin-bottom: 10px;
 }
 
 .word {
-  font-size: 50px;
+  font-size: 34px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .furigana {
@@ -72,6 +58,19 @@ strong {
   font-size: 0.5em;
   line-height: .5;
   color: #aaa;
+}
+
+.accent {
+  position: absolute;
+  font-size: 12px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+}
+
+.accent-num {
+  display: block;
 }
 
 .toggle {
@@ -88,18 +87,7 @@ strong {
   filter: blur(0px);
 }
 
-.frequency-badge {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 28px;
-}
-
-.secondary-def, .accent {
-  font-size: 0.65em;
-}
-
-/* grid setup to allow for right alignment on desktop */
+/* be careful when touching this */
 .flexgrid {
   display: grid;
   grid-template-columns: auto auto;
@@ -110,68 +98,96 @@ strong {
   border-radius: 25px;
   display: flex;
   justify-content: center;
-	align-self: start;
-	grid-column: 1;
+  overflow: hidden;
+  align-self: start;
+  grid-column: 1;
   grid-row: 1;
 }
 
+.definition-container {
+  grid-column: 1;
+  grid-row: 2;
+  padding: 10px 0;
+  font-size: 18px;
+  min-width: 320px;
+  max-width: 500px;
+}
+
+.secondary-def {
+  font-size: 12px;
+}
+
 .sen-accent {
-  position: relative;
   grid-column: 2;
   grid-row: 1 / span 2;
   align-self: start;
 }
 
-.definition-container {
-  grid-area: box3;
-  padding: 10px 0;
-  grid-column: 1;
-  grid-row: 2;
+.back-sentence {
+  writing-mode: vertical-rl;
+  text-align: justify;
+  padding: 20px;
+  overflow: hidden;
+  margin-left: 20px;
+  border-radius: 25px;
+  font-size: 21px;
+  box-shadow: 0 0 5px #7c6f64;
+  max-height: 350px;
+}
+
+b, strong {
+  color: #FFA313;
 }
 
 @media screen and (max-width: 768px) {
   .flexgrid {
-    grid-template-areas:
-      "box1"
-      "box2"
-      "box3"
-      "box4";
+    grid-template-columns: 1fr;
   }
-
-  .accent {
-    position: absolute;
-    right: 0;
-    top: 100%;
-    font-size: 0.55em;
+  
+  .frequency-badge {
+    font-size: 13px;
   }
-
+  
   .main-image {
-    grid-area: box1;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+  }
+  
+  .main-image img {
+    max-height: 250px;
   }
 
   .definition-container {
-    grid-area: box3;
+    grid-column: 1;
+    grid-row: 3;
+    font-size: 16px;
+    margin: 0 auto;
+    max-width: 90%;
   }
 
-	.sen-accent {
-    grid-area: box2;
+  .sen-accent {
+    grid-column: 1;
+    grid-row: 2;
+    width: 100%;
   }
 
   .back-sentence {
     writing-mode: horizontal-tb;
     text-align: center;
     padding: 10px;
-    position: static;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px auto;
     box-shadow: 0 0 10px #7c6f64;
-  }
-
-  .card {
-    font-size: 24px;
-  }
-
-  .definition-container {
     max-width: 90%;
+  }
+  
+  .accent {
+    position: absolute;
+    font-size: 14px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
   }
 }
